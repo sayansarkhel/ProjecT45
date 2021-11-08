@@ -84,7 +84,7 @@ function draw() {
     }
 
     //adding gravity
-     balloon.velocityY = balloon.velocityY + 2;
+     balloon.velocityY = balloon.velocityY + 0.08;
 
      
     Bar();
@@ -94,7 +94,7 @@ function draw() {
     spawnObstaclesBottom();
 
 //condition for END state
-if(topObstaclesGroup.isTouching(balloon) || balloon.isTouching(topGround)
+if(topObstaclesGroup.isTouching(balloon) 
 || balloon.isTouching(bottomGround) || bottomObstaclesGroup.isTouching(balloon)){
 
 gameState = END;
@@ -153,7 +153,7 @@ function spawnObstaclesTop()
 
 //obstacleTop.addImage(obsTop1);
 
-obstacleTop.scale = 0.1;
+obstacleTop.scale = 0.05;
 obstacleTop.velocityX = -4;
 
 //random y positions for top obstacles
@@ -188,7 +188,7 @@ function spawnObstaclesBottom()
     obstacleBottom.debug=true
 
     
-    obstacleBottom.scale = 0.07;
+    obstacleBottom.scale = 0.04;
     obstacleBottom.velocityX = -4;
     
     
